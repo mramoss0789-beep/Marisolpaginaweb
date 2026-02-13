@@ -68,6 +68,41 @@ div[class*="nextjs-toast-errors-parent"],
     h6 {
         @apply font-serif font-medium tracking-tight;
     }
+
+    /* Dynamic viewport height for mobile Safari */
+    .h-screen-safe {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    /* Focus visible styles for accessibility */
+    :focus-visible {
+        outline: 2px solid #d35c6a;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+    /* Respect reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@keyframes loader {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+.animate-loader {
+    animation: loader 1.5s ease-in-out infinite;
 }
 
 @layer components {

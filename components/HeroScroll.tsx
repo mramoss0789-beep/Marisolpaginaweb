@@ -69,8 +69,8 @@ export function HeroScroll() {
                     </div>
                 </motion.div>
 
-                {/* 
-                  7-Image Grid Container 
+                {/*
+                  7-Image Grid Container
                 */}
                 <motion.div
                     style={{ y: gridY }}
@@ -122,9 +122,9 @@ export function HeroScroll() {
 
 
                         {/* ABSOLUTE CENTER HERO */}
-                        {/* 
-                            ROBUST CENTERING: 
-                            top-0 left-0 right-0 bottom-0 + m-auto 
+                        {/*
+                            ROBUST CENTERING:
+                            top-0 left-0 right-0 bottom-0 + m-auto
                             Ensures it sits perfectly in the center of the relative parent (Grid).
                         */}
                         <motion.div

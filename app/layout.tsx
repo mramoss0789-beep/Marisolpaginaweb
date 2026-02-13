@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // Playfair Display for headers, Manrope for modern, clean body text
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
+import { PageLoader } from "@/components/PageLoader";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -70,6 +71,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${manrope.variable} font-sans antialiased`}
       >
+        <PageLoader />
         {children}
       </body>
     </html>

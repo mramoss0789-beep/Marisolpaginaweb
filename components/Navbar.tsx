@@ -100,8 +100,10 @@ export function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-2xl"
+                        className="md:hidden text-2xl p-2 -mr-2"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+                        aria-expanded={isMobileMenuOpen}
                     >
                         {/* Placeholder for icons, assuming FaTimes and FaBars are imported */}
                         {isMobileMenuOpen ? (
@@ -124,7 +126,7 @@ export function Navbar() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-20 left-0 w-full bg-white shadow-xl md:hidden py-8 px-6 border-t border-gray-100"
+                        className="fixed top-20 left-0 w-full bg-white shadow-xl md:hidden py-8 px-6 border-t border-gray-100"
                     >
                         <div className="flex flex-col gap-6 text-center">
                             {[

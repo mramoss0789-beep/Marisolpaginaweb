@@ -14,15 +14,15 @@ export function Footer() {
 
                 {/* Social Strip */}
                 <div className="grid grid-cols-3 gap-2 mb-4 max-w-2xl mx-auto">
-                    <a href="https://www.instagram.com/marisolramos.look/" target="_blank" rel="noopener noreferrer" className="bg-[#da727e] text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-sm group">
+                    <a href="https://www.instagram.com/marisolramos.look/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram" className="bg-[#da727e] text-white min-h-[48px] py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-sm group">
                         <FaInstagram className="text-base group-hover:rotate-12 transition-transform" />
                         <span className="font-bold text-[10px] tracking-widest uppercase">Instagram</span>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=61582474410782" target="_blank" rel="noopener noreferrer" className="bg-[#e08992] text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-sm group">
+                    <a href="https://www.facebook.com/profile.php?id=61582474410782" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook" className="bg-[#e08992] text-white min-h-[48px] py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-sm group">
                         <FaFacebookF className="text-sm group-hover:rotate-12 transition-transform" />
                         <span className="font-bold text-[10px] tracking-widest uppercase">Facebook</span>
                     </a>
-                    <a href="https://www.youtube.com/@inmobiliariaqualitylema7832" target="_blank" rel="noopener noreferrer" className="bg-[#e69fa6] text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-sm group">
+                    <a href="https://www.youtube.com/@inmobiliariaqualitylema7832" target="_blank" rel="noopener noreferrer" aria-label="Visítanos en YouTube" className="bg-[#e69fa6] text-white min-h-[48px] py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-sm group">
                         <FaYoutube className="text-base group-hover:rotate-12 transition-transform" />
                         <span className="font-bold text-[10px] tracking-widest uppercase">YouTube</span>
                     </a>

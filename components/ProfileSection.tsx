@@ -12,7 +12,7 @@ export function ProfileSection() {
                     <div className="lg:col-span-5 relative">
                         <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden transition-all duration-700">
                             {/* Placeholder for Marisol Portrait */}
-                            <img src="/images/profile/marisol-stage.png" alt="Marisol Ramos - Directora Estratégica" className="w-full h-full object-cover" />
+                            <Image src="/images/profile/marisol-stage.webp" fill className="object-cover" alt="Marisol Ramos - Directora Estratégica" sizes="(max-width: 1024px) 100vw, 40vw" />
                         </div>
                         {/* Decorative Frame */}
                         <div className="absolute -top-6 -right-6 w-full h-full border border-brand/20 -z-10"></div>
