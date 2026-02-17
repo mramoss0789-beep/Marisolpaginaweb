@@ -52,7 +52,12 @@ export function Navbar() {
             >
                 <div className="w-full px-6 md:px-12 lg:px-16 flex items-center justify-between h-full">
                     {/* Logo Section */}
-                    <Link href="/" className="relative z-50 flex flex-col leading-none group">
+                    <button
+                        onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                        className="relative z-50 flex flex-col leading-none group text-left cursor-pointer"
+                    >
                         <span
                             className={clsx(
                                 "font-serif text-2xl font-bold tracking-tight transition-colors group-hover:opacity-80",
@@ -64,7 +69,7 @@ export function Navbar() {
                         <span className="text-[10px] font-sans font-normal tracking-[0.2em] uppercase text-brand mt-1">
                             Asesora Inmobiliaria
                         </span>
-                    </Link>
+                    </button>
 
                     {/* Right Side Group (Links + Buttons) */}
                     <div className="hidden md:flex items-center gap-12">

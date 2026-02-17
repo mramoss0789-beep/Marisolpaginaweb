@@ -99,7 +99,7 @@ function StepCard({ step, idx }: { step: any, idx: number }) {
                     {step.buttonText && (
                         <Link
                             href={step.link}
-                            className="inline-block px-8 py-3 border border-pink-200 text-white text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-[#d35c6a] transition-all rounded-full"
+                            className="hidden lg:inline-block px-8 py-3 border border-pink-200 text-white text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-[#d35c6a] transition-all rounded-full"
                         >
                             {step.buttonText}
                         </Link>

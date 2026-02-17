@@ -12,6 +12,16 @@ export function Footer() {
         <footer className="bg-white text-charcoal pt-20 pb-8 border-t border-gray-100 overflow-hidden">
             <div className="container-wide">
 
+                {/* Email */}
+                <div className="text-center mb-6">
+                    <a
+                        href="mailto:contacto@marisolramosinmobiliaria.com"
+                        className="text-sm text-charcoal/70 hover:text-brand transition-colors tracking-wide"
+                    >
+                        contacto@marisolramosinmobiliaria.com
+                    </a>
+                </div>
+
                 {/* Social Strip */}
                 <div className="grid grid-cols-3 gap-2 mb-4 max-w-2xl mx-auto">
                     <a href="https://www.instagram.com/marisolramos.look/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram" className="bg-[#da727e] text-white min-h-[48px] py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-sm group">
