@@ -1,9 +1,56 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
+function useCountUp(target: number, duration: number, inView: boolean) {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        if (!inView) return;
+        let start = 0;
+        const startTime = performance.now();
+
+        function animate(now: number) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // ease-out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+            setCount(current);
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }, [inView, target, duration]);
+
+    return count;
+}
+
 export function ProfileSection() {
+    const statsRef = useRef<HTMLDivElement>(null);
+    const [inView, setInView] = useState(false);
+
+    useEffect(() => {
+        if (!statsRef.current) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setInView(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.5 }
+        );
+        observer.observe(statsRef.current);
+        return () => observer.disconnect();
+    }, []);
+
+    const years = useCountUp(19, 3000, inView);
+    const operations = useCountUp(250, 3000, inView);
+
     return (
         <section className="py-24 lg:py-32 bg-white overflow-hidden">
             <div className="container-wide">
@@ -11,7 +58,6 @@ export function ProfileSection() {
                     {/* Image Column */}
                     <div className="lg:col-span-5 relative">
                         <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden transition-all duration-700">
-                            {/* Placeholder for Marisol Portrait */}
                             <Image src="/images/profile/marisol-stage.webp" fill className="object-cover" alt="Marisol Ramos - Directora Estratégica" sizes="(max-width: 1024px) 100vw, 40vw" />
                         </div>
                         {/* Decorative Frame */}
@@ -38,13 +84,13 @@ export function ProfileSection() {
                             </p>
                         </div>
 
-                        <div className="mt-12 grid grid-cols-2 gap-8 border-t border-gray-100 pt-8">
+                        <div ref={statsRef} className="mt-12 grid grid-cols-2 gap-8 border-t border-gray-100 pt-8">
                             <div>
-                                <h4 className="text-3xl lg:text-4xl font-serif text-brand mb-1">19</h4>
+                                <h4 className="text-3xl lg:text-4xl font-serif text-brand mb-1">{years}</h4>
                                 <p className="text-xs uppercase tracking-widest text-charcoal/60">Años de Trayectoria</p>
                             </div>
                             <div>
-                                <h4 className="text-3xl lg:text-4xl font-serif text-brand mb-1">+250</h4>
+                                <h4 className="text-3xl lg:text-4xl font-serif text-brand mb-1">+{operations}</h4>
                                 <p className="text-xs uppercase tracking-widest text-charcoal/60">Operaciones Cerradas</p>
                             </div>
                         </div>

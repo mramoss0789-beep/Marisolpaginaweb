@@ -122,6 +122,17 @@ function StepCard({ step, idx }: { step: any, idx: number }) {
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#d35c6a]/80 to-transparent opacity-60 mix-blend-overlay"></div>
                 </div>
+                {/* Mobile-only CTA after last step image */}
+                {step.buttonText && (
+                    <div className="mt-8 text-center lg:hidden">
+                        <Link
+                            href={step.link}
+                            className="inline-block px-8 py-3 border border-pink-200 text-white text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-[#d35c6a] transition-all rounded-full"
+                        >
+                            {step.buttonText}
+                        </Link>
+                    </div>
+                )}
             </div>
         </motion.div>
     );
