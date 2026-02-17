@@ -88,7 +88,7 @@ export function HeroScroll() {
                             className="col-span-1 hidden lg:block h-full relative"
                         >
                             <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/1.svg" className="w-full h-full object-cover" alt="Architecture" />
+                                <img src="/images/hero-webp/1.webp" className="w-full h-full object-cover" alt="Architecture" loading="eager" />
                             </div>
                         </motion.div>
 
@@ -98,10 +98,10 @@ export function HeroScroll() {
                             className="col-span-1 hidden md:flex flex-col gap-4 h-full"
                         >
                             <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/7.svg" className="w-full h-full object-cover" alt="Interior" />
+                                <img src="/images/hero-webp/7.webp" className="w-full h-full object-cover" alt="Interior" />
                             </div>
                             <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/8.svg" className="w-full h-full object-cover" alt="Meeting" />
+                                <img src="/images/hero-webp/8.webp" className="w-full h-full object-cover" alt="Meeting" />
                             </div>
                         </motion.div>
 
@@ -111,7 +111,7 @@ export function HeroScroll() {
                             className="col-span-1 flex flex-col gap-4 h-full md:hidden lg:hidden"
                         >
                             <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/7.svg" className="w-full h-full object-cover" alt="Interior Mobile" />
+                                <img src="/images/hero-webp/7.webp" className="w-full h-full object-cover" alt="Interior Mobile" />
                             </div>
                         </motion.div>
 
@@ -133,7 +133,7 @@ export function HeroScroll() {
                         >
                             <div
                                 className="absolute inset-0 bg-cover bg-center"
-                                style={{ backgroundImage: "url('/images/hero/hero.svg')" }}
+                                style={{ backgroundImage: "url('/images/hero-webp/hero.webp')" }}
                             />
                             <div className="absolute inset-0 bg-black/10" />
                         </motion.div>
@@ -146,7 +146,7 @@ export function HeroScroll() {
                             className="col-span-1 flex flex-col gap-4 h-full md:hidden lg:hidden"
                         >
                             <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/9.svg" className="w-full h-full object-cover" alt="Keys Mobile" />
+                                <img src="/images/hero-webp/9.webp" className="w-full h-full object-cover" alt="Keys Mobile" />
                             </div>
                         </motion.div>
 
@@ -156,10 +156,10 @@ export function HeroScroll() {
                             className="col-span-1 hidden md:flex flex-col gap-4 h-full"
                         >
                             <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/9.svg" className="w-full h-full object-cover" alt="Keys" />
+                                <img src="/images/hero-webp/9.webp" className="w-full h-full object-cover" alt="Keys" />
                             </div>
                             <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/10.svg" className="w-full h-full object-cover" alt="Kitchen" />
+                                <img src="/images/hero-webp/10.webp" className="w-full h-full object-cover" alt="Kitchen" />
                             </div>
                         </motion.div>
 
@@ -169,7 +169,7 @@ export function HeroScroll() {
                             className="col-span-1 hidden lg:block h-full relative"
                         >
                             <div className="absolute top-0 right-0 w-full h-full rounded-lg overflow-hidden bg-gray-300">
-                                <img src="/images/hero/2.svg" className="w-full h-full object-cover" alt="New Garden" />
+                                <img src="/images/hero-webp/2.webp" className="w-full h-full object-cover" alt="New Garden" />
                             </div>
                         </motion.div>
 

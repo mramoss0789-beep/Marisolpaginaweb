@@ -39,7 +39,7 @@ const nextConfig: NextConfig = {
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: blob: https://upload.wikimedia.org https://*.elevenlabs.io",
               "media-src 'self' blob: https://elevenlabs.io https://*.elevenlabs.io",
-              "connect-src 'self' https://*.elevenlabs.io wss://*.elevenlabs.io",
+              "connect-src 'self' https://*.elevenlabs.io wss://*.elevenlabs.io https://formspree.io",
               "worker-src 'self' blob:",
               "frame-src 'self'",
             ].join('; ')
