@@ -18,10 +18,7 @@ const nextConfig: NextConfig = {
             key: 'X-XSS-Protection',
             value: '1; mode=block'
           },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
+
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff'
@@ -42,6 +39,7 @@ const nextConfig: NextConfig = {
               "connect-src 'self' https://*.elevenlabs.io wss://*.elevenlabs.io https://formspree.io",
               "worker-src 'self' blob:",
               "frame-src 'self'",
+              "frame-ancestors 'self' https://boltdevlabs.com https://*.boltdevlabs.com https://*.vercel.app http://localhost:*",
             ].join('; ')
           },
           {
