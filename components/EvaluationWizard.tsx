@@ -130,7 +130,7 @@ export function EvaluationWizard() {
                     "Content-Type": "application/json",
                     "Accept": "application/json"
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, _cc: "contacto@marisolramosinmobiliaria.com" }),
             });
 
             if (response.ok) {
