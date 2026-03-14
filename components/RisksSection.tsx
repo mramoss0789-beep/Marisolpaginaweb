@@ -40,8 +40,8 @@ export function RisksSection() {
 
             {/* 1. Sticky Header Layer */}
             {/* Remains pinned to the center of the viewport while cards scroll over it */}
-            <div className="sticky top-0 h-screen flex items-center justify-center z-0 pointer-events-none">
-                <h2 className="text-5xl lg:text-[7rem] font-serif text-[#d35c6a] font-bold tracking-tighter text-center leading-none uppercase">
+            <div className="sticky top-0 h-screen-safe flex items-center justify-center z-0 pointer-events-none">
+                <h2 className="text-4xl sm:text-5xl lg:text-[7rem] font-serif text-[#d35c6a] font-bold tracking-tighter text-center leading-none uppercase px-4">
                     Riesgos <br /> del Mercado
                 </h2>
             </div>

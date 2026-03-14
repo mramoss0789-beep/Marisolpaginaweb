@@ -45,7 +45,7 @@ export function HeroScroll() {
         <div ref={containerRef} className="relative h-[400vh] bg-sand">
             {/* Height extended to 400vh to allow for a 'Hold' phase at the end */}
 
-            <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center">
+            <div className="sticky top-0 h-screen-safe overflow-hidden flex flex-col items-center">
 
                 {/* Text Content */}
                 {/* Fixed Layout: Added pt-40 to push text CLEARLY below the Navbar (80px-100px) */}

@@ -7,10 +7,10 @@ export function CtaSection() {
     return (
         <section className="py-24 lg:py-32 bg-white text-center">
             <div className="container-wide max-w-7xl mx-auto">
-                <h2 className="text-4xl lg:text-6xl font-serif font-medium mb-8 leading-tight text-charcoal">
-                    Tu propiedad está en buenas manos, <br /> me encantaría trabajar juntos.
+                <h2 className="text-3xl md:text-4xl lg:text-6xl font-serif font-medium mb-8 leading-tight text-charcoal text-balance">
+                    Tu propiedad está en buenas manos, <br className="hidden md:block" /> me encantaría trabajar juntos.
                 </h2>
-                <p className="text-xl text-charcoal/60 mb-12 whitespace-nowrap overflow-hidden text-ellipsis max-w-full mx-auto">
+                <p className="text-lg md:text-xl text-charcoal/60 mb-12 max-w-2xl mx-auto leading-relaxed">
                     Obtén una opinión de valor personalizada y descubre el verdadero valor de mercado hoy mismo.
                 </p>
 

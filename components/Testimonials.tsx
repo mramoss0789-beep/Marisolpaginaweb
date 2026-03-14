@@ -113,7 +113,7 @@ export function Testimonials() {
                     </div>
 
                     {/* Right Column: Vertical Infinite Scroll */}
-                    <div className="relative h-[900px] overflow-hidden mask-gradient-vertical">
+                    <div className="relative h-[600px] lg:h-[900px] overflow-hidden mask-gradient-vertical">
                         {/* Gradient Mask for smooth fade in/out */}
                         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#FDF0F2] to-transparent z-10 pointer-events-none"></div>
                         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#FDF0F2] to-transparent z-10 pointer-events-none"></div>

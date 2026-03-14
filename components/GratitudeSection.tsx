@@ -1,11 +1,20 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 
 export function GratitudeSection() {
     const containerRef = useRef<HTMLDivElement>(null);
     const wordRefsRef = useRef<(HTMLSpanElement | null)[]>([]);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < 768);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end end"]
@@ -26,11 +35,11 @@ export function GratitudeSection() {
 
             let opacity;
             if (latest <= wordStart) {
-                opacity = 0.08;
+                opacity = 0.12;
             } else if (latest >= wordEnd) {
                 opacity = 1;
             } else {
-                opacity = 0.08 + 0.92 * ((latest - wordStart) / (wordEnd - wordStart));
+                opacity = 0.12 + 0.88 * ((latest - wordStart) / (wordEnd - wordStart));
             }
             el.style.opacity = String(opacity);
         });
@@ -39,18 +48,21 @@ export function GratitudeSection() {
     return (
         <section
             ref={containerRef}
-            className="relative bg-[#d35c6a] h-[400vh]"
+            className="relative bg-[#d35c6a] h-[250vh] md:h-[400vh]"
         >
-            <div className="sticky top-0 h-screen flex items-center justify-center py-12 md:py-16 px-6 md:px-8">
+            <div className="sticky top-0 h-screen-safe flex items-center justify-center py-8 px-5 md:py-16 md:px-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <p className="sr-only">{text}</p>
-                    <p className="text-3xl md:text-5xl lg:text-5xl font-serif font-medium leading-snug md:leading-tight flex flex-wrap justify-center">
+                    <p className="text-[1.35rem] leading-relaxed sm:text-2xl md:text-4xl lg:text-5xl font-serif font-medium md:leading-tight flex flex-wrap justify-center gap-x-[0.3em] gap-y-[0.1em]">
                         {words.map((word, i) => (
                             <span
                                 key={i}
                                 ref={(el) => { wordRefsRef.current[i] = el; }}
-                                className="inline-block mr-[0.3em] mb-[0.15em] text-white"
-                                style={{ opacity: 0.08 }}
+                                className="inline-block text-white will-change-[opacity]"
+                                style={{
+                                    opacity: 0.12,
+                                    transition: "opacity 0.15s ease-out",
+                                }}
                             >
                                 {word}
                             </span>
